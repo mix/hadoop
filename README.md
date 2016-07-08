@@ -1,4 +1,4 @@
-h3. Hadoop Fork for Mix 
+### Hadoop Fork for Mix 
 This repo was mainly forked to update aws sdk jars for hadoop-aws version to be used internally in Mix. This would make hadoop-aws compatible with other libs that Mix is using like dyanmoDB & S3. 
 
 For the latest information about Hadoop, please visit our website at:
