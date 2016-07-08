@@ -5,13 +5,13 @@
   <servers>
     <server>
       <id>mix.snapshots</id>
-      <username>{env.ARTIFACTORY_DEPLOY_USER}</username>
-      <password>{env.ARTIFACTORY_DEPLOY_PW}</password>
+      <username>${env.ARTIFACTORY_DEPLOY_USER}</username>
+      <password>${env.ARTIFACTORY_DEPLOY_PWD}</password>
     </server>
     <server>
       <id>mix.releases</id>
-      <username>{env.ARTIFACTORY_DEPLOY_USER}</username>
-      <password>{env.ARTIFACTORY_DEPLOY_PW}</password>
+      <username>${env.ARTIFACTORY_DEPLOY_USER}</username>
+      <password>${env.ARTIFACTORY_DEPLOY_PWD}</password>
     </server>
   </servers>
 
