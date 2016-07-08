@@ -10,7 +10,7 @@ dependencies:
     - "cd protobuf-2.5.0 && ./configure && make && make check && sudo make install && sudo ldconfig"
     - "protoc --version"
   override:
-    - "mvn clean install -DskipTests"
+    - "mvn clean install -U -DskipTests"
 test:
   override:
     - echo "skipping tests"
@@ -18,5 +18,10 @@ deployment:
   release:
     branch: master
     commands:
-     - "cd hadoop-tools/hadoop-aws/ && mvn deploy -s ../../settings.xml -X"
+     - "cd hadoop-tools/hadoop-aws/ && mvn deploy -s ../../settings.xml"
+  release:
+    branch: releases
+    commands:
+     - "mvn -B -DskipTests release:clean release:prepare release:perform"
+     - "cd hadoop-tools/hadoop-aws/ && mvn deploy -s ../../settings.xml"
 
