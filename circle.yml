@@ -18,5 +18,5 @@ deployment:
   release:
     branch: master
     commands:
-     - "cd hadoop-tools/hadoop-aws/ && mvn deploy -s ../../settings.xml"
+     - "mvn deploy -DskipTests -s settings.xml"
 
